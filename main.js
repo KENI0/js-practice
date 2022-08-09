@@ -1,74 +1,50 @@
-// const a = 'hello~ fruits and animal'
-// const b = 'chl0933@naver.com'
-// const c = '    hi~    '
-// console.log(a.slice(7, 13))
-// console.log(a.replace('fruits', ''))
-// console.log(b.match(/.+(?=@)/))
-// console.log(c.trim())
 
-// const pi = 3.14159269359879
-// console.log(pi)
+// const fruits = ['apple', 'banana', 'grapes','cherry','pineapple']
+// //console.log('apple','banana','grapes')
+// console.log(fruits)
+// console.log(...fruits)
 
-// const str = pi.toFixed(2)
-// console.log(str)
-// console.log(typeof str)
+// const toObject = (a,b,...c) => ({a,b,c})
 
-// const integer = parseInt(str)
-// const float = parseFloat(str)
-// console.log(integer)
-// console.log(float)
-// console.log(typeof integer, typeof float)
+// console.log(toObject(...fruits))
+// let a = 1
+// let b = 4
+// console.log(a,b, a === b)
+// b = a
+// console.log(a, b, a===b)
+// a = 7
+// console.log(a, b, a===b)
+// let c = 1 
+// console.log(b, c, b===c)
 
-// console.log(Math.abs(-12))
-// console.log(Math.min(10, 200))
-// console.log(Math.max(20, 5000))
-// console.log(Math.ceil(5.15413123))
-// console.log(Math.floor(5.15413123))
-// console.log(Math.round(5.15413123))
-// console.log(Math.round(Math.random()*10))
+// let a = {k: 1}
+// let b = {k: 1}
+// console.log(a, b, a===b)
+// a.k = 7 
+// console.log(a, b, a===b)
+// b = a 
+// console.log(a, b, a===b)
+// a.k = 2
+// console.log(a, b, a===b)
 
-
-// console.log(numbers[0])
-// console.log(fruits[1])
-// console.log(fruits.length)
-// console.log(numbers.find(el => el < 4))
-// console.log(numbers.concat(fruits))
-// console.log(numbers)
-
-// const a = fruits.forEach(function(fruit, i) { 
-  //   return `${fruit}-${i}`
-  // })
-  // console.log(a) // 반환이 안되는 모습! 
-  
-  // const b =fruits.map((fruit, i) => 
-  //   ({
-    //     id: i,
-    //     name: fruit
-    //   })
-    // )
-    // console.log(b)
+// let c = b
+// console.log(a, b, c, a===c)
+import _ from 'lodash'
+const user = { 
+  name: 'Woo',
+  age: 80,
+  weight: 60,
+  email: ['chl0933@naver.com']
+}
+const copyUser = _.cloneDeep(user)
+console.log(copyUser === user)
+user.age = 25 
+console.log('user',user)
+console.log('copyUser',copyUser)
+user.email.push('keim98@kyonggi.co.kr')
+console.log(user.email === copyUser.email)
+console.log('user',user)
+console.log('copyUser',copyUser)
 
 
-    // const a = numbers.map(number => number < 3)
-    // console.log(a)
 
-    // const b = numbers.filter(number => number < 3)
-    // console.log(b)
-
-    // const a = fruits.find(fruit => {
-    //   return /^b/.test(fruit)
-    // })
-    // console.log(a)
-
-    // const b = fruits.findIndex(fruit => /^g/.test(fruit))
-    // console.log(b)
-
-    // numbers.push(5)
-    // console.log(numbers)
-    // fruits.unshift('hi')
-    // console.log(fruits)
-    const numbers = [1, 2, 3, 4, 5, 6]
-    const fruits = ['apple', 'banana', 'grapes']
-
-    numbers.splice(1, 1, 'f')
-    console.log(numbers)
